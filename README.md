@@ -1,7 +1,7 @@
 # ParadiseJum 2018用のリポジトリ
 
 ## チーム名
-* CAL(仮)
+* TAMAGO is not GOHAN
 
 ## メンバー
 * ISATAKU
