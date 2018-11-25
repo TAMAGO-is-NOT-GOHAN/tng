@@ -1,4 +1,4 @@
-# ParadiseJum 2018用のリポジトリ
+# ParadiseJum 2018 TAMAGO is not GOHANのリポジトリ
 
 ## チーム名
 * TAMAGO is not GOHAN
