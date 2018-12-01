@@ -12,7 +12,7 @@ var playMovePoint = 0;
 
 var timer = window.setInterval(() => {
   main();
-}, 10000);
+}, 1000);
 
 alert(playMovePoint);
 
