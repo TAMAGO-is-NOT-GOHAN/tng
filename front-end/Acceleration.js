@@ -1,10 +1,3 @@
-var aX1;
-var aX2;
-var aY1;
-var aY2;
-var aZ1;
-var aZ2;
-
 var playMovePoint = 0.0;
 
 function loopFunc() {
@@ -42,12 +35,12 @@ function sleep(waitMsec) {
 function main() {
   //最初の加速度を取得
   window.addEventListener("devicemotion", (dat) => {
-    aX1 = dat.accelerationIncludingGravity.x;
-    aY1 = dat.accelerationIncludingGravity.y;
-    aZ1 = dat.accelerationIncludingGravity.z;
-    document.write(dat.accelerationIncludingGravity.x);
-    document.write(dat.accelerationIncludingGravity.y);
-    document.write(dat.accelerationIncludingGravity.z);
+    var aX1 = dat.accelerationIncludingGravity.x;
+    var aY1 = dat.accelerationIncludingGravity.y;
+    var aZ1 = dat.accelerationIncludingGravity.z;
+    document.write(dat.accelerationIncludingGravity.x + ", " + aX1);
+    document.write(dat.accelerationIncludingGravity.y + ", " + aY1);
+    document.write(dat.accelerationIncludingGravity.z + ", " + aZ1);
   });
 
   //最初の加速度を取得
@@ -55,12 +48,12 @@ function main() {
 
   //0.1秒後の加速度を取得
   window.addEventListener("devicemotion", (dat) => {
-    aX2 = dat.accelerationIncludingGravity.x;
-    aY2 = dat.accelerationIncludingGravity.y;
-    aZ2 = dat.accelerationIncludingGravity.z;
-    document.write(dat.accelerationIncludingGravity.x);
-    document.write(dat.accelerationIncludingGravity.y);
-    document.write(dat.accelerationIncludingGravity.z);
+    var aX2 = dat.accelerationIncludingGravity.x;
+    var aY2 = dat.accelerationIncludingGravity.y;
+    var aZ2 = dat.accelerationIncludingGravity.z;
+    document.write(dat.accelerationIncludingGravity.x + ", " + aX2);
+    document.write(dat.accelerationIncludingGravity.y + ", " + aY2);
+    document.write(dat.accelerationIncludingGravity.z + ", " + aZ2);
   });
 
   //playMovePointに最初と0.1秒後の加速度の絶対値を代入
