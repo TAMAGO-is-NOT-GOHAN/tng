@@ -43,7 +43,7 @@ function main() {
   });
 
   //最初の加速度を取得
-  sleep(100);
+  sleep(50);
 
   //0.1秒後の加速度を取得
   window.addEventListener("devicemotion", (dat) => {
