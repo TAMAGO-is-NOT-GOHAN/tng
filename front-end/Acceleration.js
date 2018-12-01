@@ -41,27 +41,23 @@ function sleep(waitMsec) {
 
 function main() {
   //最初の加速度を取得
-  window.addEventListener("devicemotion", (dat) => {
-    aX1 = dat.accelerationIncludingGravity.x;
-    aY1 = dat.accelerationIncludingGravity.y;
-    aZ1 = dat.accelerationIncludingGravity.z;
-    document.write(dat.accelerationIncludingGravity.x);
-    document.write(dat.accelerationIncludingGravity.y);
-    document.write(dat.accelerationIncludingGravity.z);
-  });
+  aX1 = dat.accelerationIncludingGravity.x;
+  aY1 = dat.accelerationIncludingGravity.y;
+  aZ1 = dat.accelerationIncludingGravity.z;
+  document.write(dat.accelerationIncludingGravity.x);
+  document.write(dat.accelerationIncludingGravity.y);
+  document.write(dat.accelerationIncludingGravity.z);
 
   //最初の加速度を取得
   sleep(100);
 
   //0.1秒後の加速度を取得
-  window.addEventListener("devicemotion", (dat) => {
-    aX2 = dat.accelerationIncludingGravity.x;
-    aY2 = dat.accelerationIncludingGravity.y;
-    aZ2 = dat.accelerationIncludingGravity.z;
-    document.write(dat.accelerationIncludingGravity.x);
-    document.write(dat.accelerationIncludingGravity.y);
-    document.write(dat.accelerationIncludingGravity.z);
-  });
+  aX2 = dat.accelerationIncludingGravity.x;
+  aY2 = dat.accelerationIncludingGravity.y;
+  aZ2 = dat.accelerationIncludingGravity.z;
+  document.write(dat.accelerationIncludingGravity.x);
+  document.write(dat.accelerationIncludingGravity.y);
+  document.write(dat.accelerationIncludingGravity.z);
 
   //playMovePointに最初と0.1秒後の加速度の絶対値を代入
   playMovePoint += /*abs*/(aX2 - aX1);
