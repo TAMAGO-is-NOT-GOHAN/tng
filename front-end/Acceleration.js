@@ -54,6 +54,6 @@ function main() {
   });
 }
 
-function abs(var value) {
+function abs(value) {
   return value > 0 ? value : value * -1;
 }
