@@ -33,11 +33,14 @@ function sleep(waitMsec) {
 }
 
 function main() {
+  var aX1, aX2;
+  var aY1, aY2;
+  var aZ1, aZ2;
   //最初の加速度を取得
   window.addEventListener("devicemotion", (dat) => {
-    var aX1 = dat.accelerationIncludingGravity.x;
-    var aY1 = dat.accelerationIncludingGravity.y;
-    var aZ1 = dat.accelerationIncludingGravity.z;
+    aX1 = dat.accelerationIncludingGravity.x;
+    aY1 = dat.accelerationIncludingGravity.y;
+    aZ1 = dat.accelerationIncludingGravity.z;
     document.write(dat.accelerationIncludingGravity.x + ", " + aX1);
     document.write(dat.accelerationIncludingGravity.y + ", " + aY1);
     document.write(dat.accelerationIncludingGravity.z + ", " + aZ1);
@@ -48,9 +51,9 @@ function main() {
 
   //0.1秒後の加速度を取得
   window.addEventListener("devicemotion", (dat) => {
-    var aX2 = dat.accelerationIncludingGravity.x;
-    var aY2 = dat.accelerationIncludingGravity.y;
-    var aZ2 = dat.accelerationIncludingGravity.z;
+    aX2 = dat.accelerationIncludingGravity.x;
+    aY2 = dat.accelerationIncludingGravity.y;
+    aZ2 = dat.accelerationIncludingGravity.z;
     document.write(dat.accelerationIncludingGravity.x + ", " + aX2);
     document.write(dat.accelerationIncludingGravity.y + ", " + aY2);
     document.write(dat.accelerationIncludingGravity.z + ", " + aZ2);
