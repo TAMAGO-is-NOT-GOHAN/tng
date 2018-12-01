@@ -1,6 +1,14 @@
 var playMovePoint = 0.0;
 
-function loopFunc() {
+var loopTimes = 10; // ループする回数
+var loopInterval = 1000; // ループする間隔(ミリ秒)
+
+var count = 0;
+var countup = function(){
+  console.log(count++);
+}
+
+var loop = setInterval(function(){
   // ループする処理
   var aX1, aX2;
   var aY1, aY2;
@@ -32,25 +40,10 @@ function loopFunc() {
   playMovePoint += aX2 - aX1;
   playMovePoint += aY2 - aY1;
   playMovePoint += aZ2 - aZ1;
-}
-function lastFunc() {
-  // ループの終わりに実行する処理
-  alert('マジ' + playMovePoint + playMovePoint);
-  alert('ぎん' + playMovePoint);
-}
-var loopTimes = 10; // ループする回数
-var loopInterval = 1000; // ループする間隔(ミリ秒)
-
-var count = 0;
-var countup = function(){
-  console.log(count++);
-}
-
-var loop = setInterval(function(){
-  loopFunc();
   countup();
   if(count >= loopTimes){
-    lastFunc();
+    alert('マジ' + playMovePoint + playMovePoint);
+    alert('ぎん' + playMovePoint);
     clearInterval(loop);
   }
 }, loopInterval);
@@ -76,10 +69,10 @@ function main() {
     document.write(dat.accelerationIncludingGravity.z + ", " + aZ1);
   });
 
-  //最初の加速度を取得
+//最初の加速度を取得
   sleep(100);
 
-  //0.1秒後の加速度を取得
+//0.1秒後の加速度を取得
   window.addEventListener("devicemotion", (dat) => {
     aX2 = dat.accelerationIncludingGravity.x;
     aY2 = dat.accelerationIncludingGravity.y;
@@ -89,7 +82,7 @@ function main() {
     document.write(dat.accelerationIncludingGravity.z + ", " + aZ2);
   });
 
-  //playMovePointに最初と0.1秒後の加速度の絶対値を代入
+//playMovePointに最初と0.1秒後の加速度の絶対値を代入
   playMovePoint += aX2 - aX1;
   playMovePoint += aY2 - aY1;
   playMovePoint += aZ2 - aZ1;
@@ -100,6 +93,6 @@ function main() {
 }
 */
 
-// function abs(var value) {
-//   return value > 0 ? value : value * -1;
-// };
+  // function abs(var value) {
+  //   return value > 0 ? value : value * -1;
+  // };
