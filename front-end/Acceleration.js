@@ -50,6 +50,8 @@ function main() {
   playMovePoint += /*abs*/(aX[1] - aX[0]);
   playMovePoint += /*abs*/(aY[1] - aY[0]);
   playMovePoint += /*abs*/(aZ[1] - aZ[0]);
+
+  document.write("test");
 }
 
 // function abs(var value) {
