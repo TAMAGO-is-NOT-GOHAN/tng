@@ -2,7 +2,79 @@ body{
     font-family: urbane, sans-serif;
     font-weight: 500;
     font-style: normal;
-    background-color: #000029;  
-    margin: 0;
+    background-color: #000029;
+    background-image: url(../Pictuter/back.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
 }
 
+#top .top_1{
+    color: #DF0081;
+    font-size: 55px;
+    text-align: center;
+    margin-top: 10pt;
+    margin-bottom:-10px;
+}
+
+#top .top_2{
+    color: #00AFEF;
+    font-size: 55px;
+    text-align: center;
+    margin-top: -10pt;
+    margin-bottom: 0px;
+}
+
+#event .NE{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 0px;
+    color: #fff;
+}
+
+#event .time{
+    text-align: center;
+    margin-top: 0px;
+    font-size: 87px;
+    color: #fff;
+}
+
+#bts .bt{
+    width: 200px;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 0px 0 0px;
+    color: #fff;
+    background-color: #DF0081;
+    border-radius: 25px;
+    margin: auto;
+}
+
+#loader-bg {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: #000028;
+    z-index: 1;
+  }
+  #loader {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    margin-top: -400px;
+    margin-left: -350px;
+    text-align: center;
+    color: #fff;
+    z-index: 3;
+  }
