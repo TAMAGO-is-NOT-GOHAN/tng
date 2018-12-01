@@ -1,6 +1,9 @@
-var aX = new Array(2);
-var aY = new Array(2);
-var aZ = new Array(2);
+var aX1;
+var aX2;
+var aY1;
+var aY2;
+var aZ1;
+var aZ2;
 
 var playMovePoint = 0.0;
 
@@ -11,6 +14,7 @@ function loopFunc() {
 function lastFunc() {
   // ループの終わりに実行する処理
   alert('マジ' + playMovePoint + playMovePoint);
+  alert('ぎん' + playMovePoint);
 }
 var loopTimes = 10; // ループする回数
 var loopInterval = 1000; // ループする間隔(ミリ秒)
@@ -38,9 +42,9 @@ function sleep(waitMsec) {
 function main() {
   //最初の加速度を取得
   window.addEventListener("devicemotion", (dat) => {
-    aX[0] = dat.accelerationIncludingGravity.x;
-    aY[0] = dat.accelerationIncludingGravity.y;
-    aZ[0] = dat.accelerationIncludingGravity.z;
+    aX1 = dat.accelerationIncludingGravity.x;
+    aY1 = dat.accelerationIncludingGravity.y;
+    aZ1 = dat.accelerationIncludingGravity.z;
     document.write(dat.accelerationIncludingGravity.x);
     document.write(dat.accelerationIncludingGravity.y);
     document.write(dat.accelerationIncludingGravity.z);
@@ -51,18 +55,18 @@ function main() {
 
   //0.1秒後の加速度を取得
   window.addEventListener("devicemotion", (dat) => {
-    aX[1] = dat.accelerationIncludingGravity.x;
-    aY[1] = dat.accelerationIncludingGravity.y;
-    aZ[1] = dat.accelerationIncludingGravity.z;
+    aX2 = dat.accelerationIncludingGravity.x;
+    aY2 = dat.accelerationIncludingGravity.y;
+    aZ2 = dat.accelerationIncludingGravity.z;
     document.write(dat.accelerationIncludingGravity.x);
     document.write(dat.accelerationIncludingGravity.y);
     document.write(dat.accelerationIncludingGravity.z);
   });
 
   //playMovePointに最初と0.1秒後の加速度の絶対値を代入
-  playMovePoint += /*abs*/(aX[1] - aX[0]);
-  playMovePoint += /*abs*/(aY[1] - aY[0]);
-  playMovePoint += /*abs*/(aZ[1] - aZ[0]);
+  playMovePoint += /*abs*/(aX2 - aX1);
+  playMovePoint += /*abs*/(aY2 - aY1);
+  playMovePoint += /*abs*/(aZ2 - aZ1);
 
   //document.write(aX[1] + ", " + aX[0]);
   //document.write(aY[1] + ", " + aY[0]);
