@@ -41,6 +41,9 @@ function main() {
     aX[0] = dat.accelerationIncludingGravity.x;
     aY[0] = dat.accelerationIncludingGravity.y;
     aZ[0] = dat.accelerationIncludingGravity.z;
+    document.write(dat.accelerationIncludingGravity.x;);
+    document.write(dat.accelerationIncludingGravity.y;);
+    document.write(dat.accelerationIncludingGravity.z;);
   });
 
   //最初の加速度を取得
@@ -51,6 +54,9 @@ function main() {
     aX[1] = dat.accelerationIncludingGravity.x;
     aY[1] = dat.accelerationIncludingGravity.y;
     aZ[1] = dat.accelerationIncludingGravity.z;
+    document.write(dat.accelerationIncludingGravity.x;);
+    document.write(dat.accelerationIncludingGravity.y;);
+    document.write(dat.accelerationIncludingGravity.z;);
   });
 
   //playMovePointに最初と0.1秒後の加速度の絶対値を代入
@@ -58,9 +64,9 @@ function main() {
   playMovePoint += /*abs*/(aY[1] - aY[0]);
   playMovePoint += /*abs*/(aZ[1] - aZ[0]);
 
-  document.write(aX[1] + ", " + aX[0]);
-  document.write(aY[1] + ", " + aY[0]);
-  document.write(aZ[1] + ", " + aZ[0]);
+  //document.write(aX[1] + ", " + aX[0]);
+  //document.write(aY[1] + ", " + aY[0]);
+  //document.write(aZ[1] + ", " + aZ[0]);
 }
 
 // function abs(var value) {
