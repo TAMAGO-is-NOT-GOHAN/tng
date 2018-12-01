@@ -43,35 +43,36 @@ function sleep(waitMsec) {
 }
 
 function getScore(score) {
-  var pos1 = new Object();
-  var pos2 = new Object();
+  var aX1, aX2;
+  var aY1, aY2;
+  var aZ1, aZ2;
 
   //最初の加速度を取得
   window.addEventListener("devicemotion", (dat) => {
-    pos1.x = dat.accelerationIncludingGravity.x;
-    pos1.y = dat.accelerationIncludingGravity.y;
-    pos1.z = dat.accelerationIncludingGravity.z;
+    aX1 = dat.accelerationIncludingGravity.x;
+    aY1 = dat.accelerationIncludingGravity.y;
+    aZ1 = dat.accelerationIncludingGravity.z;
   });
 
-  document.write(pos1.x + pos1.y + pos1.z);
+  document.write(aX1 + aY1 + aZ1);
 
   //最初の加速度を取得
   sleep(100);
 
   //0.1秒後の加速度を取得
   window.addEventListener("devicemotion", (dat) => {
-    pos2.x = dat.accelerationIncludingGravity.x;
-    pos2.y = dat.accelerationIncludingGravity.y;
-    pos2.z = dat.accelerationIncludingGravity.z;
+    aX2 = dat.accelerationIncludingGravity.x;
+    aY2 = dat.accelerationIncludingGravity.y;
+    aZ2 = dat.accelerationIncludingGravity.z;
   });
 
-  document.write(pos2.x + pos2.y + pos2.z);
+  document.write(aX2 + aY2 + aZ2);
 
   //playMovePointに最初と0.1秒後の加速度の絶対値を代入
   var n = 2 ;	// 小数点第n位まで残す
-  score += Math.round(pos2.x - pos1.x);
-  score += Math.round(pos2.y - pos1.y);
-  score += Math.round(pos2.z - pos1.z);
+  score += Math.round(aX2 - aX1);
+  score += Math.round(aY2 - aY1);
+  score += Math.round(aZ2 - aZ1);
   //newPoint += aX2 - aX1;
   //newPoint += aY2 - aY1;
   //newPoint += aZ2 - aZ1;
