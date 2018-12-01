@@ -4,9 +4,13 @@ var aZ = new Array(2);
 
 var playMovePoint = 0.0;
 
-var timer = window.setInterval(() => {
+const var startTime = Math.round((new Date()).getTime() / 1000);
+var finishTime = startTime + 10;
+
+while (timeStamp <= finishTime) {
+  finishTime = Math.round((new Date()).getTime() / 1000);
   main();
-}, 10000);
+}
 
 alert(playMovePoint);
 
@@ -17,7 +21,7 @@ function main() {
     aZ[0] = dat.accelerationIncludingGravity.z;
   });
 
-  var mainLoop = window.setInterval(() => {}, 100);
+  sleep(100);
 
   window.addEventListener("devicemotion", (dat) => {
     aX[1] = dat.accelerationIncludingGravity.x;
