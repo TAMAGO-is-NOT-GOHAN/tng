@@ -1,6 +1,8 @@
 // ユーザーネームの取得
 var param = location.search
 
+var username = getParam('username')
+
 function getParam(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
@@ -20,7 +22,7 @@ function loopFunc() {
 function lastFunc() {
   // ループの終わりに実行する処理
   // alert(Math.ceil(playMovePoint / 100));
-  location.href = "./point.html?username=" + getParam('username') + "&score=" + Math.ceil(playMovePoint / 100);
+  location.href = "./point.html?username=" + username + "&score=" + Math.ceil(playMovePoint / 100);
   navigator.vibrate([1000]);
 }
 var loopTimes = 20; // ループする回数
