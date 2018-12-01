@@ -6,13 +6,16 @@ window.addEventListener("devicemotion", (dat) => {
   aZ[0] = dat.accelerationIncludingGravity.z;
 });
 
-var timer = window.setInterval(() => {}, 1000);
+var timer = window.setInterval(() => {
+  phoneVib();
+}, 1000);
 
 window.addEventListener("devicemotion", (dat) => {
   aX[1] = dat.accelerationIncludingGravity.x;
   aY[1] = dat.accelerationIncludingGravity.y;
   aZ[1] = dat.accelerationIncludingGravity.z;
 });
+
 
 function phoneVib() {
    if (aX[1] > aX[0] + 5 && aY[1] > aY[0] + 5 && aZ[1] > aZ[0] + 5) {
