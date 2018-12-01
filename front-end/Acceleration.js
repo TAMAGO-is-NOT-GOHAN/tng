@@ -53,6 +53,8 @@ function getScore(score) {
     pos1.z = dat.accelerationIncludingGravity.z;
   });
 
+  document.write(pos1.x + pos1.y + pos1.z);
+
   //最初の加速度を取得
   sleep(100);
 
@@ -62,6 +64,8 @@ function getScore(score) {
     pos2.y = dat.accelerationIncludingGravity.y;
     pos2.z = dat.accelerationIncludingGravity.z;
   });
+
+  document.write(pos2.x + pos2.y + pos2.z);
 
   //playMovePointに最初と0.1秒後の加速度の絶対値を代入
   var n = 2 ;	// 小数点第n位まで残す
