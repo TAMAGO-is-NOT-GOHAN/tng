@@ -29,6 +29,13 @@ var loop = setInterval(function(){
   }
 }, loopInterval);
 
+function sleep(waitMsec) {
+  var startMsec = new Date();
+
+  // 指定ミリ秒間だけループさせる（CPUは常にビジー状態）
+  while (new Date() - startMsec < waitMsec);
+}
+
 function main() {
   document.write("test1");
   //最初の加速度を取得
