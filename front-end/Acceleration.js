@@ -64,9 +64,9 @@ function main() {
   });
 
   //playMovePointに最初と0.1秒後の加速度の絶対値を代入
-  playMovePoint += /*abs*/(aX2 - aX1);
-  playMovePoint += /*abs*/(aY2 - aY1);
-  playMovePoint += /*abs*/(aZ2 - aZ1);
+  playMovePoint += aX2 - aX1;
+  playMovePoint += aY2 - aY1;
+  playMovePoint += aZ2 - aZ1;
 
   //document.write(aX[1] + ", " + aX[0]);
   //document.write(aY[1] + ", " + aY[0]);
