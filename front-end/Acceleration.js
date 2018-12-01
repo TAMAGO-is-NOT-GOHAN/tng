@@ -37,7 +37,6 @@ function sleep(waitMsec) {
 }
 
 function main() {
-  document.write("test1");
   //最初の加速度を取得
   window.addEventListener("devicemotion", (dat) => {
     aX[0] = dat.accelerationIncludingGravity.x;
@@ -45,11 +44,9 @@ function main() {
     aZ[0] = dat.accelerationIncludingGravity.z;
   });
 
-  document.write("test2");
   //最初の加速度を取得
   sleep(100);
 
-  document.write("test3");
   //0.1秒後の加速度を取得
   window.addEventListener("devicemotion", (dat) => {
     aX[1] = dat.accelerationIncludingGravity.x;
@@ -57,7 +54,6 @@ function main() {
     aZ[1] = dat.accelerationIncludingGravity.z;
   });
 
-  document.write("test4");
   //playMovePointに最初と0.1秒後の加速度の絶対値を代入
   playMovePoint += /*abs*/(aX[1] - aX[0]);
   playMovePoint += /*abs*/(aY[1] - aY[0]);
@@ -66,8 +62,6 @@ function main() {
   document.write(aX[1] - aX[0]);
   document.write(aY[1] - aY[0]);
   document.write(aZ[1] - aZ[0]);
-
-  document.write("test");
 }
 
 // function abs(var value) {
