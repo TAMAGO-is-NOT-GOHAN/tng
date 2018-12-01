@@ -1,18 +1,14 @@
-var playMoveScore = 0;
+var playMovePoint = 0.0;
 
-window.addEventListener("devicemotion", getPos);
-  
 function loopFunc() {
   // ループする処理
-  playMovePoint = getPoint(playMovePoint);
+  main();
 }
-
 function lastFunc() {
   // ループの終わりに実行する処理
   alert('マジ' + playMovePoint + playMovePoint);
   alert('ぎん' + playMovePoint);
 }
-
 var loopTimes = 10; // ループする回数
 var loopInterval = 1000; // ループする間隔(ミリ秒)
 
@@ -22,7 +18,7 @@ var countup = function(){
 }
 
 var loop = setInterval(function(){
-  //loopFunc();
+  loopFunc();
   countup();
   if(count >= loopTimes){
     lastFunc();
@@ -36,19 +32,19 @@ function sleep(waitMsec) {
   while (new Date() - startMsec < waitMsec);
 }
 
-function getScore(score) {
+function main() {
   var aX1, aX2;
   var aY1, aY2;
   var aZ1, aZ2;
-
   //最初の加速度を取得
   window.addEventListener("devicemotion", (dat) => {
     aX1 = dat.accelerationIncludingGravity.x;
     aY1 = dat.accelerationIncludingGravity.y;
     aZ1 = dat.accelerationIncludingGravity.z;
+    document.write(dat.accelerationIncludingGravity.x + ", " + aX1);
+    document.write(dat.accelerationIncludingGravity.y + ", " + aY1);
+    document.write(dat.accelerationIncludingGravity.z + ", " + aZ1);
   });
-
-  document.write(aX1 + aY1 + aZ1);
 
   //最初の加速度を取得
   sleep(100);
@@ -58,22 +54,19 @@ function getScore(score) {
     aX2 = dat.accelerationIncludingGravity.x;
     aY2 = dat.accelerationIncludingGravity.y;
     aZ2 = dat.accelerationIncludingGravity.z;
+    document.write(dat.accelerationIncludingGravity.x + ", " + aX2);
+    document.write(dat.accelerationIncludingGravity.y + ", " + aY2);
+    document.write(dat.accelerationIncludingGravity.z + ", " + aZ2);
   });
 
-  document.write(aX2 + aY2 + aZ2);
-
   //playMovePointに最初と0.1秒後の加速度の絶対値を代入
-  var n = 2 ;	// 小数点第n位まで残す
-  score += Math.round(aX2 - aX1);
-  score += Math.round(aY2 - aY1);
-  score += Math.round(aZ2 - aZ1);
-  //newPoint += aX2 - aX1;
-  //newPoint += aY2 - aY1;
-  //newPoint += aZ2 - aZ1;
+  playMovePoint += aX2 - aX1;
+  playMovePoint += aY2 - aY1;
+  playMovePoint += aZ2 - aZ1;
 
-  document.write(score);
-
-  return score;
+  //document.write(aX[1] + ", " + aX[0]);
+  //document.write(aY[1] + ", " + aY[0]);
+  //document.write(aZ[1] + ", " + aZ[0]);
 }
 
 // function abs(var value) {
