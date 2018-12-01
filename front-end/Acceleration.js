@@ -24,7 +24,7 @@ window.addEventListener("devicemotion", (dat) => {
 });
 
 function dispAlert() {
-  if (aX[1] > aX[0] + 5 && aY[1] > aY[0] + 5 && aZ[1] > aZ[0] + 5) {
+//  if (aX[1] > aX[0] + 5 && aY[1] > aY[0] + 5 && aZ[1] > aZ[0] + 5) {
     alert('めっちゃ動いてそう(小並)');
-  }
+//  }
 }
