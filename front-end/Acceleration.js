@@ -4,11 +4,11 @@ var aZ = new Array(2);
 
 var playMovePoint = 0.0;
 
-const var startTime = Math.round((new Date()).getTime() / 1000);
-var finishTime = startTime + 10;
+var startTime = Math.round((new Date()).getTime() / 1000);
+const var finishTime = startTime + 10;
 
 while (startTime <= finishTime) {
-  finishTime = Math.round((new Date()).getTime() / 1000);
+  startTime = Math.round((new Date()).getTime() / 1000);
   main();
 }
 
