@@ -10,7 +10,7 @@
         <link rel="apple-touch-icon" href=""><!--iPhoneのホーム画面のicon-->
         <link rel="stylesheet" href="https://use.typekit.net/ttl7tba.css"><!--Adobefont-->
         <script type="text/javascript" src=""></script>
-
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
 $(function() {
@@ -26,6 +26,10 @@ $(window).load(function () { //全ての読み込みが完了したら実行
   $('#wrap').css('display', 'block');
 });
  
+$(function(){
+	$('body').fadeMover();
+});
+
 //10秒たったら強制的にロード画面を非表示
 $(function(){
   setTimeout('stopload()',10000);
@@ -64,6 +68,6 @@ function nextpage() {
             <div id="bts">
                 <input type="button" class="bt" value"OK?" onclick="nextpage()">
             </div>
-        </div>             
+        </div> 
     </body>
 </html>
