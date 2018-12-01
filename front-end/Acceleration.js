@@ -1,4 +1,3 @@
-alert('start');
 var aX = new Array(2);
 var aY = new Array(2);
 var aZ = new Array(2);
@@ -18,7 +17,7 @@ function main() {
     aZ[0] = dat.accelerationIncludingGravity.z;
   });
 
-  var timer = window.setInterval(() => {}, 100);
+  var mainLoop = window.setInterval(() => {}, 100);
 
   window.addEventListener("devicemotion", (dat) => {
     aX[1] = dat.accelerationIncludingGravity.x;
