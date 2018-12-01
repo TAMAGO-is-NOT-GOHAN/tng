@@ -6,7 +6,7 @@ function loopFunc() {
 }
 function lastFunc() {
   // ループの終わりに実行する処理
-  alert(Math.ceil(playMovePoint));
+  alert(Math.ceil(playMovePoint * 10));
 }
 var loopTimes = 10; // ループする回数
 var loopInterval = 1000; // ループする間隔(ミリ秒)
