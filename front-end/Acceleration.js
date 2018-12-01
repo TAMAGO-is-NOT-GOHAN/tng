@@ -1,3 +1,4 @@
+alert('start');
 var aX = new Array(2);
 aX[0] = 0;
 aX[1] = 0;
