@@ -14,7 +14,7 @@ window.addEventListener("devicemotion", (dat) => {
 });
 
 var timer = window.setInterval(() => {
-  phoneVib();
+  dispAlert();
 }, 1000);
 
 window.addEventListener("devicemotion", (dat) => {
