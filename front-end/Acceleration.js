@@ -24,6 +24,7 @@ var countup = function(){
 var loop = setInterval(function(){
   //loopFunc();
   playMovePoint = getPoint(playMovePoint);
+  document.write("ああああああああああ" + newPoint);
   countup();
   if(count >= loopTimes){
     lastFunc();
@@ -48,9 +49,6 @@ function getPoint(point) {
     aX1 = dat.accelerationIncludingGravity.x;
     aY1 = dat.accelerationIncludingGravity.y;
     aZ1 = dat.accelerationIncludingGravity.z;
-    document.write(dat.accelerationIncludingGravity.x + ", " + aX1);
-    document.write(dat.accelerationIncludingGravity.y + ", " + aY1);
-    document.write(dat.accelerationIncludingGravity.z + ", " + aZ1);
   });
 
   //最初の加速度を取得
@@ -61,9 +59,6 @@ function getPoint(point) {
     aX2 = dat.accelerationIncludingGravity.x;
     aY2 = dat.accelerationIncludingGravity.y;
     aZ2 = dat.accelerationIncludingGravity.z;
-    document.write(dat.accelerationIncludingGravity.x + ", " + aX2);
-    document.write(dat.accelerationIncludingGravity.y + ", " + aY2);
-    document.write(dat.accelerationIncludingGravity.z + ", " + aZ2);
   });
 
   //playMovePointに最初と0.1秒後の加速度の絶対値を代入
@@ -71,6 +66,8 @@ function getPoint(point) {
   newPoint += aY2 - aY1;
   newPoint += aZ2 - aZ1;
   
+  document.write(newPoint);
+
   return newPoint;
 }
 
