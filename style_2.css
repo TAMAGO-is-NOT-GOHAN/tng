@@ -38,12 +38,23 @@ body{
 
 #form .id{
     font-size: 40px;
-    font-family: 'Limelight', cursive;
     text-align: left;
     color: #FFF;
     margin: 5px 5px;
     padding: 0;
     margin-bottom: 0;
+ 
+}
+
+#form .name{
+    font-size: 30px;
+    text-align: left;
+    color: #FFF;
+    margin: 5px 5px;
+    padding: 0;
+    margin-top: 20x;
+    margin-bottom: -10px;
+    border-bottom: 5px solid #FFF;
 }
 
 
@@ -106,7 +117,11 @@ body{
 
 
 #bts{
-    margin-top: 250px;
+    margin-top: 300px;
+}
+
+#bts_2{
+    margin-top: 170px;
 }
 
 
@@ -123,3 +138,87 @@ body{
     border-radius: 25px;
     margin: auto;
 }
+
+#bts_2 .bt{
+    width: 200px;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 0px 0 0px;
+    color: #fff;
+    background-color: #DF0081;
+    border-radius: 25px;
+    margin: auto;
+}
+
+
+#sample6Wrap{
+	position: relative;
+    height: 200px;
+    bottom: -230px;
+}
+#sample6Wrap .sample6{
+	top: 0;
+	right: 300px;
+	bottom: 0;
+	left: 0;
+	width: 200px;
+    height: 200px;
+    transition: 1s;
+}
+ 
+ 
+.loading{
+    margin-top: 70px;
+    margin-left: 150px;
+    color: #fff;
+    font-size: 50px;
+}
+ 
+.loading span {
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 -.05em;
+    animation: loading 3s;
+  }
+  loading span:nth-child(2) {
+    animation-duration: .1s;
+  }
+  loading span:nth-child(3) {
+    animation-duration: .2s;
+  }
+  loading span:nth-child(4) {
+    animation-duration: .3s;
+  }
+  @keyframes loading {
+      from{
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+    }
+
+
+    div#circle{
+        margin: auto;
+               background-color: #000029;
+              border: solid 10px #fff;
+              width: 190px;
+            height: 190px;
+            -moz-border-radius: 140px;
+            -webkit-border-radius: 140px;
+            border-radius: 140px;
+            box-shadow: 0 0 0 3px #000029;
+            -webkit-box-shadow: 0 0 0 3px #000029;
+            -moz-box-shadow: 0 0 0 3px #000029;
+    }
+    p{
+        font-size: 52px;
+        margin-top: 60px;
+        color: #DF0081;
+        text-align: center;
+        font-weight: bold;
+    }
