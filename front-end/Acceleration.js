@@ -38,12 +38,9 @@ function main() {
   var aZ1, aZ2;
   //最初の加速度を取得
   window.addEventListener("devicemotion", (dat) => {
-    playMovePoint += dat.accelerationIncludingGravity.x;
-    playMovePoint += dat.accelerationIncludingGravity.y;
-    playMovePoint += dat.accelerationIncludingGravity.z;
-    document.write(dat.accelerationIncludingGravity.x + ", " + aX1);
-    document.write(dat.accelerationIncludingGravity.y + ", " + aY1);
-    document.write(dat.accelerationIncludingGravity.z + ", " + aZ1);
+    playMovePoint -= abs(dat.accelerationIncludingGravity.x);
+    playMovePoint -= abs(dat.accelerationIncludingGravity.y);
+    playMovePoint -= abs(dat.accelerationIncludingGravity.z);
   });
 
   //最初の加速度を取得
@@ -51,21 +48,12 @@ function main() {
 
   //0.1秒後の加速度を取得
   window.addEventListener("devicemotion", (dat) => {
-    playMovePoint += dat.accelerationIncludingGravity.x;
-    playMovePoint += dat.accelerationIncludingGravity.y;
-    playMovePoint += dat.accelerationIncludingGravity.z;
-    document.write(dat.accelerationIncludingGravity.x + ", " + aX2);
-    document.write(dat.accelerationIncludingGravity.y + ", " + aY2);
-    document.write(dat.accelerationIncludingGravity.z + ", " + aZ2);
+    playMovePoint += abs(dat.accelerationIncludingGravity.x);
+    playMovePoint += abs(dat.accelerationIncludingGravity.y);
+    playMovePoint += abs(dat.accelerationIncludingGravity.z);
   });
-
-  //playMovePointに最初と0.1秒後の加速度の絶対値を代入
-
-  //document.write(aX[1] + ", " + aX[0]);
-  //document.write(aY[1] + ", " + aY[0]);
-  //document.write(aZ[1] + ", " + aZ[0]);
 }
 
-// function abs(var value) {
-//   return value > 0 ? value : value * -1;
-// };
+function abs(var value) {
+  return value > 0 ? value : value * -1;
+}
