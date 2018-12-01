@@ -2,20 +2,6 @@ var playMoveScore = 0;
 
 window.addEventListener("devicemotion", getPos);
   
-// 加速度が変化
-function getPos(event) {
-  var pos = new Object();
-  // 加速度
-  // X軸
-  pos.x = event.acceleration.x;
-  // Y軸
-  pos.y = event.acceleration.y;
-  // Z軸
-  pos.z = event.acceleration.z;
-
-  return pos;
-}
-
 /*
 function loopFunc() {
   // ループする処理
@@ -42,7 +28,6 @@ var countup = function(){
 var loop = setInterval(function(){
   //loopFunc();
   playMoveScore = getScore(playMoveScore);
-  alert(playMoveScore);
   countup();
   if(count >= loopTimes){
     alert('マジ' + playMovePoint + playMovePoint);
@@ -58,36 +43,25 @@ function sleep(waitMsec) {
 }
 
 function getScore(score) {
-  var aX1, aX2;
-  var aY1, aY2;
-  var aZ1, aZ2;
+  var pos1 = new Object();
+  var pos2 = new Object();
 
   //最初の加速度を取得
-  /*
   window.addEventListener("devicemotion", (dat) => {
-    aX1 = dat.accelerationIncludingGravity.x;
-    aY1 = dat.accelerationIncludingGravity.y;
-    aZ1 = dat.accelerationIncludingGravity.z;
+    pos1.x = dat.accelerationIncludingGravity.x;
+    pos1.y = dat.accelerationIncludingGravity.y;
+    pos1.z = dat.accelerationIncludingGravity.z;
   });
-  */
-
-  pos1 = getPos();
-  document.write(pos1.x + ", " + pos1.y + ", " + pos1.z);
 
   //最初の加速度を取得
   sleep(100);
 
   //0.1秒後の加速度を取得
-  /*
   window.addEventListener("devicemotion", (dat) => {
-    aX2 = dat.accelerationIncludingGravity.x;
-    aY2 = dat.accelerationIncludingGravity.y;
-    aZ2 = dat.accelerationIncludingGravity.z;
+    pos2.x = dat.accelerationIncludingGravity.x;
+    pos2.y = dat.accelerationIncludingGravity.y;
+    pos2.z = dat.accelerationIncludingGravity.z;
   });
-  */
-
-  pos2 = getPos();
-  document.write(pos2.x + ", " + pos2.y + ", " + pos2.z);
 
   //playMovePointに最初と0.1秒後の加速度の絶対値を代入
   var n = 2 ;	// 小数点第n位まで残す
