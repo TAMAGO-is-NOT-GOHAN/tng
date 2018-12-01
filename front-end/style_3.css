@@ -7,7 +7,7 @@ body{
 }
 
 #header .top{
-    color: #DF0081;
+    color: rgb(147, 214, 238);
     text-align: center;
     font-size: 70px;
     position: relative;
@@ -92,7 +92,7 @@ span#point2{
     display: block;
     text-align: center;
     padding: 0px 0 0px;
-    color: #fff;
+    color: #DF0081;
     background-color: #DF0081;
     border-radius: 25px;
     margin: auto;
