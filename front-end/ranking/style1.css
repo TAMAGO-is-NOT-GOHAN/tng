@@ -3,7 +3,7 @@
 body{
     font-family: 游ゴシック体, 'Yu Gothic',
     'Hiragino Kaku Gothic Pro';
-    background: linear-gradient(#DF0081, #1E00FF);
+    background: linear-gradient(rgb(178, 0, 223), rgb(0, 52, 95));
     margin: 0;
 }
 
@@ -57,7 +57,7 @@ h1{
     font-family: 'Limelight', cursive;
     text-align: left;
     color: #00AFEF;
-    margin: 50px 50px;
+    margin: 20px 50px 0px;
         padding: 0;
         border-bottom: inset 5px #fff;
         margin-bottom: -10;
@@ -83,10 +83,10 @@ h3{
     font-family: 'Limelight', cursive;
     text-align: left;
     color: #00AFEF;
-    margin: 70px 70px;
         padding: 0px;
         border-bottom: inset 2px #fff;
-        margin-bottom: 0;
+        
+    margin: 20px 80px 0px;
 }
 
 span#name2{
@@ -108,10 +108,10 @@ span#point2{
     display: inline-block;
     width: 200px;
     text-align: center;
-    background-color: #9ec34b;
-    border: 2px solid #9ec34b;
+    background-color: #000;
+    border: 2px solid #000;
     font-size: 16px;
-    color: #9ec34b;
+    color: #000;
     text-decoration: none;
     font-weight: bold;
     padding: 10px 24px;
