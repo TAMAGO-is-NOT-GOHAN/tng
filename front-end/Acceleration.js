@@ -1,4 +1,4 @@
-var playMovePoint = 0.0;
+var playMovePoint = 0;
 
 /*
 function loopFunc() {
@@ -7,11 +7,13 @@ function loopFunc() {
 }
 */
 
+/*
 function lastFunc() {
   // ループの終わりに実行する処理
   alert('マジ' + playMovePoint + playMovePoint);
   alert('ぎん' + playMovePoint);
 }
+*/
 
 var loopTimes = 10; // ループする回数
 var loopInterval = 1000; // ループする間隔(ミリ秒)
@@ -24,10 +26,11 @@ var countup = function(){
 var loop = setInterval(function(){
   //loopFunc();
   playMovePoint = getPoint(playMovePoint);
-  document.write("ああああああああああ" + newPoint);
+  alert(newPoint);
   countup();
   if(count >= loopTimes){
-    lastFunc();
+    alert('マジ' + playMovePoint + playMovePoint);
+    alert('ぎん' + playMovePoint);
     clearInterval(loop);
   }
 }, loopInterval);
@@ -42,7 +45,6 @@ function getPoint(point) {
   var aX1, aX2;
   var aY1, aY2;
   var aZ1, aZ2;
-  var newPoint = point;
 
   //最初の加速度を取得
   window.addEventListener("devicemotion", (dat) => {
@@ -64,19 +66,19 @@ function getPoint(point) {
   document.write(newPoint);
   //playMovePointに最初と0.1秒後の加速度の絶対値を代入
   var n = 2 ;	// 小数点第n位まで残す
-  newPoint += Math.floor((aX2 - aX1) * Math.pow(10, n)) / Math.pow(10, n);
+  point += Math.floor((aX2 - aX1) * Math.pow(10, n)) / Math.pow(10, n);
   document.write(newPoint);
-  newPoint += Math.floor((aY2 - aY1) * Math.pow(10, n)) / Math.pow(10, n);
+  point += Math.floor((aY2 - aY1) * Math.pow(10, n)) / Math.pow(10, n);
   document.write(newPoint);
-  newPoint += Math.floor((aZ2 - aZ1) * Math.pow(10, n)) / Math.pow(10, n);
+  point += Math.floor((aZ2 - aZ1) * Math.pow(10, n)) / Math.pow(10, n);
   document.write(newPoint);
   //newPoint += aX2 - aX1;
   //newPoint += aY2 - aY1;
   //newPoint += aZ2 - aZ1;
 
-  document.write(newPoint);
+  document.write(point);
 
-  return newPoint;
+  return point;
 }
 
 // function abs(var value) {
