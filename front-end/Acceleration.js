@@ -37,13 +37,15 @@ function main() {
   var aZ1, aZ2;
   //最初の加速度を取得
   window.addEventListener("devicemotion", (dat) => {
-    playMovePoint -= abs(dat.accelerationIncludingGravity.x);
-    playMovePoint -= abs(dat.accelerationIncludingGravity.y);
-    playMovePoint -= abs(dat.accelerationIncludingGravity.z);
+    playMovePoint += abs(dat.accelerationIncludingGravity.x);
+    playMovePoint += abs(dat.accelerationIncludingGravity.y);
+    playMovePoint += abs(dat.accelerationIncludingGravity.z);
+  });
 
   //最初の加速度を取得
   sleep(50);
 
+  window.addEventListener("devicemotion", (dat) => {
   //0.1秒後の加速度を取得
     playMovePoint += abs(dat.accelerationIncludingGravity.x);
     playMovePoint += abs(dat.accelerationIncludingGravity.y);
