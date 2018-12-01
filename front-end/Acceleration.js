@@ -6,7 +6,6 @@ function loopFunc() {
 }
 function lastFunc() {
   // ループの終わりに実行する処理
-  navigator.vibrate([500, 100, 500]);
   alert(Math.ceil(playMovePoint * 10));
 }
 var loopTimes = 10; // ループする回数
