@@ -4,12 +4,26 @@ var aZ = new Array(2);
 
 var playMovePoint = 0.0;
 
-var startTime = Math.round((new Date()).getTime() / 1000);
-const var finishTime = startTime + 10;
-
-while (startTime = Math.round((new Date()).getTime() / 1000) <= finishTime) {
+function loopFunc() {
   main();
 }
+// 繰り返す回数
+var loopTimes = 10;
+// 繰り返す間隔(ミリ秒)
+var loopInterval = 1000;
+
+var count = 0;
+var countup = function(){
+    console.log(count++);
+}
+
+var loop = setInterval(function(){
+    loopFunc();
+    countup();
+    if(count >= loopTimes){
+        clearInterval(loop);
+    }
+}, loopInterval);
 
 alert(playMovePoint);
 
