@@ -47,8 +47,7 @@ body{
 }
 
 
-
-#form input[type="ID"],
+#form input[type="text"],
 #form input[type="PASS"],
 #form textarea,
 #form select 
@@ -107,7 +106,7 @@ body{
 
 
 #bts{
-    margin-top: 300px;
+    margin-top: 250px;
 }
 
 

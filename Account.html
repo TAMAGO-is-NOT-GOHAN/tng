@@ -10,7 +10,12 @@
         <link rel="apple-touch-icon" href=""><!--iPhoneのホーム画面のicon-->
         <link rel="stylesheet" href="https://use.typekit.net/ttl7tba.css"><!--Adobefont-->
         <link rel="stylesheet" href="style_2.css">
-        <script type="text/javascript" src=""></script>
+        <script type="text/javascript">
+            function Pass_index(){
+                var name = Username_form.Username.value;
+                location.href = "../index.html?username=" + name;
+            }
+        </script>
     </head>
 
     <body>
@@ -21,14 +26,14 @@
         </div>
     
         <div id="form">
-            <form>
+            <form name="Username_form" action="../index.html">
               <h2 class="id">Name</h2>
-              <input type="ID" name="field1" placeholder="Name" />
+              <input type="text" name="Username" placeholder="Name" />
             </form>
         </div>
 
         <div id="bts">
-                <a href="/hoge.html" class="bt">GO!</a>
+                <input type="button" class="bt" value="OK?" onclick="Pass_index()">
         </div>
     </body>
 </html>
