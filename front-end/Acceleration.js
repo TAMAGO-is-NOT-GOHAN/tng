@@ -5,29 +5,32 @@ var aZ = new Array(2);
 var playMovePoint = 0.0;
 
 function loopFunc() {
+  // ループする処理
   main();
 }
-// 繰り返す回数
-var loopTimes = 10;
-// 繰り返す間隔(ミリ秒)
-var loopInterval = 1000;
+function lastFunc() {
+  // ループの終わりに実行する処理
+  alert(playMovePoint);
+}
+var loopTimes = 10; // ループする回数
+var loopInterval = 1000; // ループする間隔(ミリ秒)
 
 var count = 0;
 var countup = function(){
-    console.log(count++);
+  console.log(count++);
 }
 
 var loop = setInterval(function(){
-    loopFunc();
-    countup();
-    if(count >= loopTimes){
-        clearInterval(loop);
-    }
-}, loopInterval);
-
-alert(playMovePoint);
+  loopFunc();
+  countup();
+  if(count >= loopTimes){
+    lastFunc();
+    clearInterval(loop);
+  }
+}, loopInterval);alert(playMovePoint);
 
 function main() {
+  //最初の加速度を取得
   window.addEventListener("devicemotion", (dat) => {
     aX[0] = dat.accelerationIncludingGravity.x;
     aY[0] = dat.accelerationIncludingGravity.y;
@@ -36,12 +39,14 @@ function main() {
 
   sleep(100);
 
+  //0.1秒後の加速度を取得
   window.addEventListener("devicemotion", (dat) => {
     aX[1] = dat.accelerationIncludingGravity.x;
     aY[1] = dat.accelerationIncludingGravity.y;
     aZ[1] = dat.accelerationIncludingGravity.z;
   });
 
+  //playMovePointに最初と0.1秒後の加速度の絶対値を代入
   playMovePoint += /*abs*/(aX[1] - aX[0]);
   playMovePoint += /*abs*/(aY[1] - aY[0]);
   playMovePoint += /*abs*/(aZ[1] - aZ[0]);
