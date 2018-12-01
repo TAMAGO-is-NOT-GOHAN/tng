@@ -32,7 +32,6 @@ var loop = setInterval(function(){
 function sleep(waitMsec) {
   var startMsec = new Date();
 
-  // 指定ミリ秒間だけループさせる（CPUは常にビジー状態）
   while (new Date() - startMsec < waitMsec);
 }
 
@@ -59,9 +58,9 @@ function main() {
   playMovePoint += /*abs*/(aY[1] - aY[0]);
   playMovePoint += /*abs*/(aZ[1] - aZ[0]);
 
-  document.write(aX[1] - aX[0]);
-  document.write(aY[1] - aY[0]);
-  document.write(aZ[1] - aZ[0]);
+  document.write(aX[1] + ", " + aX[0]);
+  document.write(aY[1] + ", " + aY[0]);
+  document.write(aZ[1] + ", " + aZ[0]);
 }
 
 // function abs(var value) {
