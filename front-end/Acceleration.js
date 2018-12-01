@@ -61,11 +61,19 @@ function getPoint(point) {
     aZ2 = dat.accelerationIncludingGravity.z;
   });
 
+  document.write(newPoint);
   //playMovePointに最初と0.1秒後の加速度の絶対値を代入
-  newPoint += aX2 - aX1;
-  newPoint += aY2 - aY1;
-  newPoint += aZ2 - aZ1;
-  
+  var n = 2 ;	// 小数点第n位まで残す
+  newPoint += Math.floor((aX2 - aX1) * Math.pow(10, n)) / Math.pow(10, n);
+  document.write(newPoint);
+  newPoint += Math.floor((aY2 - aY1) * Math.pow(10, n)) / Math.pow(10, n);
+  document.write(newPoint);
+  newPoint += Math.floor((aZ2 - aZ1) * Math.pow(10, n)) / Math.pow(10, n);
+  document.write(newPoint);
+  //newPoint += aX2 - aX1;
+  //newPoint += aY2 - aY1;
+  //newPoint += aZ2 - aZ1;
+
   document.write(newPoint);
 
   return newPoint;
