@@ -7,8 +7,7 @@ var playMovePoint = 0.0;
 var startTime = Math.round((new Date()).getTime() / 1000);
 const var finishTime = startTime + 10;
 
-while (startTime <= finishTime) {
-  startTime = Math.round((new Date()).getTime() / 1000);
+while (startTime = Math.round((new Date()).getTime() / 1000) <= finishTime) {
   main();
 }
 
