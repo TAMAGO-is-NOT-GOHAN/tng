@@ -2,7 +2,7 @@ var aX = new Array(2);
 var aY = new Array(2);
 var aZ = new Array(2);
 
-var playMovePoint = 0.0;
+playMovePoint = 0.0;
 
 function loopFunc() {
   // ループする処理
