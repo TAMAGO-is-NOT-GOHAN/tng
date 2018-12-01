@@ -37,8 +37,9 @@ function stopload(){
   $('#loader').delay(600).fadeOut(300);
 }
 
-    function nextpage() {
-        location.href = "./Acccount.html"
+function nextpage() {
+    location.href = "./Acccount.html"
+}
 </script>
 
         <link rel= "stylesheet" href="style.css">
@@ -61,7 +62,7 @@ function stopload(){
                 <p class="time">14:00</p>
             </div>
             <div id="bts">
-                <a href="./Account.html" class="bt">START</a>
+                <input type="button" class="bt" value"OK?" onclick="nextpage()">
             </div>
         </div>             
     </body>
