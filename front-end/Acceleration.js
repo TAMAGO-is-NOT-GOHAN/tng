@@ -27,7 +27,7 @@ var loop = setInterval(function(){
     lastFunc();
     clearInterval(loop);
   }
-}, loopInterval);alert(playMovePoint);
+}, loopInterval);
 
 function main() {
   //最初の加速度を取得
