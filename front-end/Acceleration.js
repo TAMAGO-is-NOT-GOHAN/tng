@@ -2,20 +2,16 @@ var playMoveScore = 0;
 
 window.addEventListener("devicemotion", getPos);
   
-/*
 function loopFunc() {
   // ループする処理
   playMovePoint = getPoint(playMovePoint);
 }
-*/
 
-/*
 function lastFunc() {
   // ループの終わりに実行する処理
   alert('マジ' + playMovePoint + playMovePoint);
   alert('ぎん' + playMovePoint);
 }
-*/
 
 var loopTimes = 10; // ループする回数
 var loopInterval = 1000; // ループする間隔(ミリ秒)
@@ -27,11 +23,9 @@ var countup = function(){
 
 var loop = setInterval(function(){
   //loopFunc();
-  playMoveScore = getScore(playMoveScore);
   countup();
   if(count >= loopTimes){
-    alert('マジ' + playMovePoint + playMovePoint);
-    alert('ぎん' + playMovePoint);
+    lastFunc();
     clearInterval(loop);
   }
 }, loopInterval);
