@@ -63,6 +63,10 @@ function main() {
   playMovePoint += /*abs*/(aY[1] - aY[0]);
   playMovePoint += /*abs*/(aZ[1] - aZ[0]);
 
+  document.write(aX[1] - aX[0]);
+  document.write(aY[1] - aY[0]);
+  document.write(aZ[1] - aZ[0]);
+
   document.write("test");
 }
 
