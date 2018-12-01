@@ -66,11 +66,11 @@ function getPoint(point) {
   document.write(newPoint);
   //playMovePointに最初と0.1秒後の加速度の絶対値を代入
   var n = 2 ;	// 小数点第n位まで残す
-  point += Math.floor((aX2 - aX1) * Math.pow(10, n)) / Math.pow(10, n);
+  point += Math.round(aX2 - aX1);
   document.write(newPoint);
-  point += Math.floor((aY2 - aY1) * Math.pow(10, n)) / Math.pow(10, n);
+  point += Math.round(aY2 - aY1);
   document.write(newPoint);
-  point += Math.floor((aZ2 - aZ1) * Math.pow(10, n)) / Math.pow(10, n);
+  point += Math.round(aZ2 - aZ1);
   document.write(newPoint);
   //newPoint += aX2 - aX1;
   //newPoint += aY2 - aY1;
