@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <title>RANKING</title>
     <meta charset="utf-8">
@@ -11,28 +11,33 @@
     <meta name="keywords" content="">
     <link rel="stylesheet" href="https://use.typekit.net/ttl7tba.css"><!--Adobefont-->
     <link rel="stylesheet" href="style_2.css">
-</head>
+    <script type="text/javascript">
+function Pass_index(){
+  location.href = "./front-end/ranking.html";
+}
+    </script>
+  </head>
 
-<body>
+  <body>
     <div id="header">
-        <header>
-            <h1 class="top">POINT</h1>
-        </header>
+      <header>
+        <h1 class="top">POINT</h1>
+      </header>
     </div>
 
     <div id="circle">
-        <p><span id="score"></span>pt</p>
+      <p><span id="score"></span>pt</p>
     </div> 
 
     <div id="form">
-        <h2 class="name"><span id="username"></span></h2>
+      <h2 class="name"><span id="username"></span></h2>
     </div>
 
     <div id="bts_2">
-        <input type="button" class="bt" value="OK?">
+      <input type="button" class="bt" value="OK?" onclick="Pass_index()">
     </div>
 
-  <script type="text/javascript" src="./point.js"></script>
-</body>
+    <script type="text/javascript" src="./point.js"></script>
+  </body>
 
 </html>
