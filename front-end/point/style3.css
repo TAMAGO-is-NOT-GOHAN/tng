@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Limelight');
+
+body{
+    font-family: 游ゴシック体, 'Yu Gothic',
+    'Hiragino Kaku Gothic Pro';
+   
+    background-color: #000029;
+     margin: 0;
+}
+
+
+/* 罫線　*/
+h3{
+    clear: both;
+    border-bottom: solid 5px #2C93C7;
+    margin-top: 30px;
+}
+/* ヘッダー */
+header{
+    position: fixed;
+    width: 100%;	/* ヘッダーの横幅を指定する */
+    height: 60px;
+    background-color: #000029;
+    margin-bottom: 0px;
+    
+    -webkkit-box-shadow: 0 5px 17px #000029;
+    box-shadow: 0 5px 17px #000029;
+    padding: 5px; 
+    opacity: 1; /* 55％不透明度(＝45％透過) */
+}
+
+/* ヘッダーの固定
+div#header-fixed
+{
+    position: fixed;            / * ヘッダーの固定 * /
+    top: 0px;                   / *  位置(上0px) * /
+    left: 0px;                  / * 位置(右0px) * /
+    width: 100%;                / * 横幅100%　* /
+    height: 140px;              / * 縦幅140px * /
+}
+*/
+header h2{
+    font-family: 'Limelight', cursive;
+    text-align: center;
+    text-decoration: none;
+    color: #DF0081;
+    margin: 30px 30px;
+        padding: -1px;
+        border-bottom: medium solid #fff;
+}
+ 
+
+
+/*１位から３位のランキング表示*/
+h1{
+    
+    font-size: 30px;
+    font-family: 'Limelight', cursive;
+    text-align: left;
+    color: #00AFEF;
+    margin: 50px 50px;
+        padding: 0;
+        border-bottom: inset 5px #fff;
+        margin-bottom: -10;
+}
+
+span#name{
+    font-size: 30px;
+    text-align: left;
+    margin: 20px 20px;
+    color: #ffF;
+}
+
+span#point{
+    font-size: 12px;
+    text-align: right;
+    color: #DF0081;
+}
+
+/*4位以降のランキング表示*/
+h3{
+    
+    font-size: 20px;
+    font-family: 'Limelight', cursive;
+    text-align: left;
+    color: #00AFEF;
+    margin: 70px 70px;
+        padding: 0px;
+        border-bottom: inset 2px #fff;
+        margin-bottom: 0;
+}
+
+span#name2{
+    font-size: 20px;
+    text-align: left;
+    margin: 20px 20px;
+    color: #ffF;
+}
+
+span#point2{
+    font-size: 8px;
+    text-align: right;
+    color: #DF0081;
+}
+
+div#circle{
+    margin: auto;
+           background-color: #000029;
+          border: solid 10px #fff;
+          width: 190px;
+        height: 190px;
+        -moz-border-radius: 140px;
+        -webkit-border-radius: 140px;
+        border-radius: 140px;
+        box-shadow: 0 0 0 3px #000029;
+        -webkit-box-shadow: 0 0 0 3px #000029;
+        -moz-box-shadow: 0 0 0 3px #000029;
+}
+p{
+    font-size: 52px;
+    margin-top: 60px;
+    color: #DF0081;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ここから下がボタンのCSS　*/
+.btn-animation-02 {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    background-color: #000;
+    border: 2px solid #000;
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 24px;
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  .btn-animation-02 span {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .btn-animation-02::before,
+  .btn-animation-02::after {
+    content: "";
+    display: block;
+    background-color: #FFF;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition: .2s;
+  }
+  .btn-animation-02::before {
+    left: 0;
+  }
+  .btn-animation-02::after {
+    right: 0;
+  }
+  
+  .btn-animation-02:hover:before,
+  .btn-animation-02:hover:after {
+    width: 0;
+    background-color: #FFF;
+  }
+  
+  .btn-animation-02:hover {
+    color: #FFF;
+  }
