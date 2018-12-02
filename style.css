@@ -3,7 +3,7 @@ body{
     font-weight: 500;
     font-style: normal;
     background-color: #000029;
-    background-image: url(../Pictuter/back.png);
+    background-image: url(./Pictuter/back.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
