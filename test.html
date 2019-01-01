@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes">
+        <meta name="apple-mobile-web-app-capable" content="yes"> <!--ネイティブアプリぽっくできる -->
+        <meta name="description" content="指定時間で体を動かして、高得点を狙おう！">
+        <meta name="keywords" content="">
+        <title>DYNAMIC DANCE</title>
+        <link rel="apple-touch-icon" href=""><!--iPhoneのホーム画面のicon-->
+        <link rel="stylesheet" href="https://use.typekit.net/ttl7tba.css"><!--Adobefont-->
+        <script type="text/javascript" src=""></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="jquery.fademover.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script>
+          $(function() {
+            var h = $(window).height();
+            $('#wrap').css('display','none');
+            $('#loader-bg ,#loader').height(h).css('display','block');
+          });
+$(window).load(function () { //全ての読み込みが完了したら実行
+  $('#loader-bg').delay(900).fadeOut(800);
+  $('#loader').delay(600).fadeOut(300);
+  $('#wrap').css('display', 'block');
+});
+$(function(){
+  $('body').fadeMover();
+});
+//10秒たったら強制的にロード画面を非表示
+$(function(){
+  setTimeout('stopload()',10000);
+});
+function stopload(){
+  $('#wrap').css('display','block');
+  $('#loader-bg').delay(900).fadeOut(800);
+  $('#loader').delay(600).fadeOut(300);
+}
+function nextpage() {
+  location.href = "./Account.html"
+}
+  </script>
+
+  <link rel= "stylesheet" href="style.css">
+
+  </head>
+
+  <body>
+  <div id="loading-bg">
+  <div id="loader">
+  <img src="./Pictuter/loading.gif" width="700" height="700" alt="Now Loading...">
+  </div>
+  </div>
+  <div id="wrap">
+  <div id="top">
+  <h1 class="top_1">DYNAMIC</h1>
+  <h1 class="top_2">DANSE</h1>
+  </div>
+  <div id="event">
+  <p class="NE">NEXT EVENT</p>
+  <p class="time">14:00</p>
+  </div>
+  <div id="bts">
+    <div class="stage">
+      <input type="button" class="bt" value="NEXT!" onclick="nextpage()">
+    </div>
+  </div>
+  </div> 
+  </body>
+  </html>
