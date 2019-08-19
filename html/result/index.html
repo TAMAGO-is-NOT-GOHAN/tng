@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>RANKING</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10.0, user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!--ネイティブアプリぽっくできる -->   
+    <meta name="description" content="指定時間で体を動かして、高得点を狙おう！">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://use.typekit.net/ttl7tba.css"><!--Adobefont-->
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+function Pass_index(){
+  location.href = "../rank/index.html";
+}
+    </script>
+  </head>
+
+  <body>
+    <div id="header">
+      <header>
+        <h1 class="top">POINT</h1>
+      </header>
+    </div>
+
+    <div id="circle">
+      <p><span id="score"></span>pt</p>
+    </div> 
+
+    <div id="form">
+      <h2 class="name"><span id="username"></span></h2>
+    </div>
+
+    <div id="bts_2">
+      <input type="button" class="bt" value="OK?" onclick="Pass_index()">
+    </div>
+
+    <script type="text/javascript" src="./point.js"></script>
+  </body>
+
+</html>
