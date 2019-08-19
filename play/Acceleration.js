@@ -4,13 +4,13 @@ var param = location.search
 var username = getParam('username')
 
 function getParam(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
+  if (!url) url = window.location.href;
+  name = name.replace(/[\[\]]/g, "\\$&");
+  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+    results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
 var playMovePoint = 0.0;
@@ -22,21 +22,21 @@ function loopFunc() {
 function lastFunc() {
   // ループの終わりに実行する処理
   // alert(Math.ceil(playMovePoint / 100));
-  location.href = "../waiting/index.html?username=" + username + "&score=" + Math.ceil(playMovePoint / 100);
+  location.href = "../result/index.html?username=" + username + "&score=" + Math.ceil(playMovePoint / 100);
   navigator.vibrate([1000]);
 }
 var loopTimes = 20; // ループする回数
 var loopInterval = 1000; // ループする間隔(ミリ秒)
 
 var count = 0;
-var countup = function(){
+var countup = function () {
   console.log(count++);
 }
 
-var loop = setInterval(function(){
+var loop = setInterval(function () {
   loopFunc();
   countup();
-  if(count >= loopTimes){
+  if (count >= loopTimes) {
     lastFunc();
     clearInterval(loop);
   }
@@ -63,7 +63,7 @@ function main() {
   sleep(50);
 
   window.addEventListener("devicemotion", (dat) => {
-  //0.1秒後の加速度を取得
+    //0.1秒後の加速度を取得
     playMovePoint += abs(dat.accelerationIncludingGravity.x);
     playMovePoint += abs(dat.accelerationIncludingGravity.y);
     playMovePoint += abs(dat.accelerationIncludingGravity.z);
