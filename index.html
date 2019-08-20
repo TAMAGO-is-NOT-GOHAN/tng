@@ -44,15 +44,6 @@
     function nextpage() {
       location.href = "./account/index.html"
     }
-
-    var randomList = new Array(
-      "https://cultofthepartyparrot.com/parrots/hd/parrot.gif",
-      "https://cultofthepartyparrot.com/parrots/hd/parrotnotfound.gif",
-      "https://cultofthepartyparrot.com/parrots/hd/60fpsparrot.gif",
-      "https://cultofthepartyparrot.com/parrots/hd/confusedparrot.gif");
-    var num = Math.floor(Math.random() * randomList.length);
-    var printHtml = '<img src=' + randomList[num] + ' alt="ランダム画像">';
-    document.write(printHtml);
   </script>
 
   <link rel="stylesheet" href="style.css">
@@ -71,11 +62,12 @@
       <h1 class="top_1">DYNAMIC</h1>
       <h1 class="top_2">DANSE</h1>
     </div>
-    
-    <div class="parent"><!--親-->
+
+    <div class="parent">
+      <!--親-->
       <span class="circle">
-      <script type=”text/javascript”> </script>
-    </span>
+        <div id="parrot"></div>
+      </span>
     </div>
 
     <div id="bts">
@@ -84,5 +76,17 @@
       </div>
     </div>
   </div>
+  <script>
+    var randomList = new Array(
+      "https://cultofthepartyparrot.com/parrots/hd/parrot.gif",
+      "https://cultofthepartyparrot.com/parrots/hd/parrotnotfound.gif",
+      "https://cultofthepartyparrot.com/parrots/hd/60fpsparrot.gif",
+      "https://cultofthepartyparrot.com/parrots/hd/confusedparrot.gif");
+    var num = Math.floor(Math.random() * randomList.length);
+    var printHtml = '<img src=' + randomList[num] + ' alt="ランダム画像">';
+    var parrot = document.getElementById("parrot");
+    parrot.innerHTML = printHtml;  
+  </script>
 </body>
+
 </html>
