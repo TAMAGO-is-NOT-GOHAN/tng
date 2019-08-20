@@ -15,26 +15,6 @@ function getParam(name, url) {
   return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-function getCSVFile() {
-  var xhr = new XMLHttpRequest();
-  xhr.onload = function () {
-    createArray(xhr.responseText);
-  };
-
-  xhr.open("get", "data.csv", true);
-  xhr.send(null);
-}
-getCSVFile();
-
-function createArray(csvData) {
-  var tempArray = csvData.split("\n");
-  var csvArray = new Array();
-  for (var i = 0; i < tempArray.length; i++) {
-    csvArray[i] = tempArray[i].split(",");
-  }
-  console.log(csvArray);
-}
-
 function tweet() {
   window.open("https://twitter.com/intent/tweet?text=私は%20%23DynamicDance%20で" + score + "点を獲得しました！", "_blank");
 }
