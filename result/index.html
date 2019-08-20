@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="style.css">
   <script type="text/javascript">
     function Pass_index() {
-      location.href = "../rank/index.html";
+      location.href = "../index.html";
     }
   </script>
 </head>
@@ -36,13 +36,11 @@
     <h2 class="name"><span id="username"></span></h2>
   </div>
 
-  <div id="bts_2">
-    <input type="button" class="bt" value="Tweet" onclick="tweet()">
+  <div id="bts_3">
+    <input type="button" class="bt" value="HOME" onclick="Pass_index()">
   </div>
 
-  <div id="bts_3">
-    <input type="button" class="bt" value="OK?" onclick="Pass_index()">
-  </div>
+  <button type="tweet" onclick="tweet()"><img src="../img/tweet.png" alt="button" width="100" height="100"></button>
 
   <script type="text/javascript" src="./point.js"></script>
 </body>

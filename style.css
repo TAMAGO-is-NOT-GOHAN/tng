@@ -3,7 +3,7 @@ body{
     font-weight: 500;
     font-style: normal;
     background-color: #000029;
-    background-image: url(./Pictuter/back.png);
+    background-image: url(./img/back.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,20 +27,6 @@ body{
     margin-bottom: 0px;
 }
 
-#event .NE{
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 0px;
-    color: #fff;
-}
-
-#event .time{
-    text-align: center;
-    margin-top: 0px;
-    font-size: 87px;
-    color: #fff;
-}
-
 #bts .bt{
     width: 200px;
     font-size: 40px;
@@ -53,6 +39,10 @@ body{
     background-color: #DF0081;
     border-radius: 25px;
     margin: auto;
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    left: 0;
 }
 
 #loader-bg {
@@ -77,4 +67,32 @@ body{
     text-align: center;
     color: #fff;
     z-index: 3;
+  }
+
+
+ .circle{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #fff;
+    margin:auto;
+    position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; 
+  z-index: 10;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+    margin:auto;
+    position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; 
+  z-index: 20;
   }

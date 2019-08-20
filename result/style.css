@@ -63,10 +63,6 @@ body{
 #form textarea,
 #form select 
 {
-	-webkit-transition: all 0.30s ease-in-out;
-	-moz-transition: all 0.30s ease-in-out;
-	-ms-transition: all 0.30s ease-in-out;
-	-o-transition: all 0.30s ease-in-out;
 	outline: none;
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -169,6 +165,44 @@ body{
     background-color: #DF0081;
     border-radius: 25px;
     margin: auto;
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    left: 0;
+}
+
+#tweet{
+    margin-top: 100px;
+}
+
+#tweet .bt{
+    width: 200px;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 0px 0 0px;
+    color: #fff;
+    background-color: #DF0081;
+    border-radius: 25px;
+    margin: auto;
+}
+
+button {
+    width: auto;
+    padding:0;
+    margin:0;
+    background:none;
+    border:0;
+    font-size:0;
+    line-height:0;
+    overflow:visible;
+    cursor:pointer;
+    position: absolute;
+    right: 0;
+    bottom: 150px;
+    left: 160px;
 }
 
 
