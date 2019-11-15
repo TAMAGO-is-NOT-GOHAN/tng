@@ -1,0 +1,13 @@
+{
+  "name": "tng",
+  "version": "1.0.0",
+  "description": "Dynamic Dance",
+  "main": "index.html",
+  "scripts": {
+    "test": "http-server -o",
+    "start": "http-server -o"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}
